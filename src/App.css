@@ -1,0 +1,396 @@
+
+* {
+  box-sizing: inherit;
+  font-family: 'Markazi Text', serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/*Below is CSS for Nav Bar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+}
+
+
+
+.navbar-links {
+  flex: 1;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-links-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+.navbar-links li {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 27px;
+}
+
+.navbar-links li a:hover {
+color: rgb(157, 157, 157);
+border-bottom: 1px solid gold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-smallscreen {
+  display: none;
+  cursor: pointer;
+  background-color: black;
+}
+
+.navbar-smallscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #495E57;
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.navbar-smallscreen-links {
+  text-decoration: none;
+  margin-top: 30vh;
+  text-align: center;
+  list-style-type: none;
+}
+
+.navbar-smallscreen-links li {
+  margin: 2rem;
+  font-size: 27px;
+}
+
+.navbar-smallscreen-links a {
+  text-decoration: none;
+  color: white;
+}
+.navbar-smallscreen-links li a:hover {
+  color: rgb(157, 157, 157);
+  border-bottom: 1px solid gold;
+  }
+
+.navbar-smallscreen-overlay .overlay-close {
+  font-size: 27px;
+  color: goldenrod;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-smallscreen {
+    display: flex;
+  }
+}
+
+/* Below is the CSS for the Header*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #495E57;
+}
+
+.wrapper-info {
+width: 50vw;
+}
+
+.wrapper-info h1 {
+  color: #F4CE14;
+}
+
+.wrapper-info h2, .wrapper-info p{
+  color: white
+}
+
+
+.table-reserve-button {
+  height: 30px;
+  border-radius: 10px;
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header-image img {
+  height: 40vh;
+  width: 30vw;
+  border-radius: 5%;
+}
+
+/* Below is for the Main section */
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-header-button {
+  padding: 0.5em 1em;
+  display: flex;
+}
+
+.featured-items {
+  padding: 0.5em;
+}
+
+
+.button-online-menu {
+  height: 30px;
+  border-radius: 10px;
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  margin-left: 50vw;
+  margin-top: 3em;
+  font-size: 20px;
+
+}
+
+.menu-item {
+width: 15vw;
+flex-direction: column;
+padding-bottom: 3em;
+margin-left: 5vw;
+background-color: #EDEFEE;
+height: 80vh;
+}
+
+.item-price {
+  font-size: 25px;
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.menu-item p {
+  padding: 0 10px;
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+}
+
+.price {
+  color: red;
+}
+
+.menu-image {
+    height: 35vh;
+    width: 15vw;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  /*Below is the CSS for the reservation form*/
+
+  .reservation-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #495E57;
+    height: 100vh;
+    justify-content: center;
+  }
+  .reservation-wrapper h1 {
+    color: #F4CE14;
+    padding-left: 1em;
+    margin-bottom: 1.5em;
+    padding-top: 0em;
+    font-size: 40px;
+  }
+
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+  }
+
+  .entry-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .reservation-form label {
+    color:#F4CE14;
+    padding: 0.5em 0;
+    font-size: 2em;
+  }
+
+  .reservation-form button {
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+    width:  15em;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+  }
+
+  .form-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reservation-form input, .reservation-form select {
+    margin: 0.5em 0;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  /* Below is for the Reviews Page */
+
+.review-wrapper {
+  display: flex;
+  padding: 1em 2em;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.review {
+  background-color: #fbdabb;
+  border-radius: 5%;
+  padding: 2em;
+  flex-direction: column;
+  width: 20vw;
+  height: 75vh;
+}
+
+.review-photo {
+  height: 10em;
+  width: 10em;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.photo-name {
+  display: flex;
+  justify-content: space-around;
+}
+
+.review-name {
+  padding-top: 20%;
+  font-size: 30px;
+}
+
+.customer-review {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-family: 'Karla', sans-serif;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.ratings h2 {
+  color: red;
+}
+
+/*Below is About us section*/
+
+.aboutUs {
+  padding: 1em 2em;
+}
+
+.aboutUs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.aboutUs-info {
+  width: 50vw;
+  font-size: 25px;
+}
+
+.aboutUs-photo img {
+  width: 40vw;
+  height: 70vh;
+}
+
+/*below is for the footer*/
+
+.footer-wrapper {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.footer-logo {
+  margin-top: 10vh;
+}
+
+.footer-logo img {
+  width: 20vw;
+}
+
+.footer-wrapper li {
+  list-style-type: none;
+}
+
+.footer-wrapper h4 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #EDEFEE;
+}
+
+.footer-nav li {
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+.footer-contact-us li {
+  justify-content: space-between;
+  margin:10px 0px;
+}
+
+footer{
+  background-color: #495E57;
+  color: #EDEFEE;
+}
